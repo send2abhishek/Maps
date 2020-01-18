@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/map"
+        tools:context=".MapsActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="60dp"
+        android:background="@drawable/white_border"
+        android:id="@+id/relativelay"
+        >
+        <!--<ImageView-->
+            <!--android:layout_width="25dp"-->
+            <!--android:layout_height="25dp"-->
+            <!--android:padding="4dp"-->
+            <!--android:src="@drawable/ic_magnify"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:id="@+id/ic_search"-->
+            <!--/>-->
+
+        <!--<EditText-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_toRightOf="@id/ic_search"-->
+            <!--android:layout_margin="4dp"-->
+            <!--android:textColor="#000"-->
+            <!--android:hint="Enter City code, Address or zip code"-->
+            <!--android:textSize="18sp"-->
+            <!--android:textColorHint="#000"-->
+            <!--android:id="@+id/ic_edittext"-->
+            <!--android:imeOptions="actionSearch"-->
+            <!--/>-->
+
+        <fragment android:id="@+id/autocomplete_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+            />
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:id="@+id/current_loc"
+        android:layout_below="@id/relativelay"
+       android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/ic_loc"
+        android:layout_marginTop="6dp"
+        />
+
+
+
+</RelativeLayout>
